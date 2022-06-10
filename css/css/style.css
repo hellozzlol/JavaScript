@@ -1,0 +1,8 @@
+h2 {
+  color:rgb(116, 116, 221); /* 글자 색 */
+  font-size: 2.0em;
+}
+p {
+  font-size:1.0em;  /* 글자 크기 */
+  line-height: 3.0;  /* 줄간격 */
+}
