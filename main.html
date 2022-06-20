@@ -8,9 +8,6 @@
     <title>Document</title>
 
 
-
-
-
     <style>
         caption {
             font-size: 30px;
@@ -19,9 +16,9 @@
             font-weight: bold;
         }
 
-       table {
+        table {
             width: 500px;
-            height:500px;
+            height: 500px;
             text-align: center;
             font-weight: bold;
         }
@@ -35,8 +32,6 @@
             color: rgb(6, 42, 241);
             background-color: antiquewhite;
         }
-
-      
     </style>
 
 
@@ -44,17 +39,15 @@
 
 <body>
     <input type="file" id="selectFile" name="selectFile" accept="text/plain">
-  <script src="js/arry_basic3.js"></script>
-    <button id = "add">클릭</button>
+    <script src="js/arry_basic3.js"></script>
+    <button id="add">클릭</button>
     <script>
-       // let btn = document.getElementById('add');
-        //console.log(btn);
-        //btn.addEventListener('Click',function(){
-           //console.log(this); //윈도우도 아니고 오브젝트도 아니고 이벤트를 받는 대상
-          
-       // })
+        let btn = document.getElementById('add');
+        console.log(btn);
+        btn.addEventListener('Click', function () {
+            console.log(this); //윈도우도 아니고 오브젝트도 아니고 이벤트를 받는 대상
+        })
     </script>
 </body>
 
 </html>
-

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박경아 페이지</title>
+    <style>
+        #container{
+            width: 90%;
+            margin:0 auto;
+        }
+        header{
+            width: 100%;
+            height: 70px;
+            margin: 0 auto;
+        }
+        header ul{
+            text-align: center;
+            padding: 18px 0;
+            border-top: 1px solid rgb(177, 176, 176);
+            border-bottom: 1px solid rgb(177, 176, 176);
+        }
+        header ul li{
+            list-style: none;
+            display: inline;
+        }
+        header ul li a{
+            text-decoration: none;
+            color: black;
+            margin-right: 25px;
+            font-weight: bold;
+            font-size: 1.2em;
+            width: 100%;
+            padding: 16px 0;
+        }
+        header ul li a:hover{
+            border-bottom: 2px solid black;
+        }
+        nav{
+            margin-top: 50px;
+            width: 26%;
+            float: left;
+            text-align: left;
+        }
+        nav li{
+            list-style: none;
+            display: block;
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+        }
+        nav li:hover{
+            background-color: rgb(211, 201, 255);
+        }
+        nav li a{
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            line-height: normal;
+        }
+        section #firstArticle{
+            width: 70%;
+            float: right;
+            margin-top: 50px;
+        }
+        section #secondArticle{
+            width: 70%;
+            float: right;
+            margin-top: 10px;
+        }
+        article #firstP{
+            float: right;
+            width: 300px;
+            margin-right: -80px;
+            margin-top: 35px;
+            font-size: smaller;
+        }
+        article #secondP{
+            font-weight: bold;
+            font-size: 12px;
+            padding-top: 10px;
+            padding-left: 40px;
+            width: 280px;
+            margin: 0 auto;
+            float: left;
+            padding-bottom: 10px;
+        }
+        #inputOption{
+            float: right;
+            padding-right: 45px;
+        }
+        #select{
+            margin-left: 20px;
+        }
+        article>h2{
+            float: left;
+        }
+        hr{
+            clear: both;
+        }
+        table {
+            width: 90%;
+            border-bottom: 1px solid #ddd;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        td {
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        td:nth-child(2){
+            text-align: left;
+        }
+        th {
+            border-bottom: 1px solid #ddd;
+            background-color: rgb(248, 248, 248);
+        }
+        td,tr,th {
+            padding: 15px;
+            font-size: 14px;
+        }
+        thead>tr>th{
+            border-top: 1px solid rgb(99, 99, 99);
+        }
+        tbody>tr>td a{
+            text-decoration: none;
+            color: black;
+        }
+        tbody>tr>td a:hover{
+            text-decoration: underline;
+        }
+        footer{
+            width: 70%;
+            float: right;
+        }
+        footer ul{
+            margin: 0 auto;
+            text-align: center;
+        }
+        footer ul li{
+            margin: 20px 0;
+            list-style: none;
+            display: inline-block;
+        }
+        footer ul li a{
+            text-decoration: none;
+            color: dimgray;
+            padding: 10px;
+        }
+        .direct{
+            border: 1px solid rgb(207, 207, 207);
+            border-radius: 100%;
+            display:inline-block;
+            min-width:15px;
+            line-height:15px;
+            font-size:13px;
+        }
+        #page{
+            border: 1px solid rgb(99, 99, 99);
+            border-radius: 100%;
+            display:inline-block;
+            min-width:15px;
+            line-height:15px;
+            color: aliceblue;
+            background-color: darkgray;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <ul>
+            <li><a href="#">감염병</a></li>
+            <li><a href="#">건강정보</a></li>
+            <li><a href="#">정책정보</a></li>
+            <li><a href="#">연구개발</a></li>
+            <li><a href="#">알림자료</a></li>
+            <li><a href="#">간행물·통계</a></li>
+            <li><a href="#">민원·정보공개</a></li>
+            <li><a href="#">기관소개</a></li>
+            <li><a href="#">사업별누리집</a></li>
+        </ul>
+    </header>
+    <nav>
+        <ul>
+            <h2>알림 · 자료</h2>
+            <hr style="margin-bottom: 15px;">
+            <li><a href="">이달의건강소식</a></li>
+            <li><a href="">보도자료</a></li>
+            <li><a href="">포토뉴스</a></li>
+            <li><a href="">홍보자료</a></li>
+            <li><a href="">공지사항</a></li>
+            <li><a href="">공고/공시</a></li>
+            <li><a href="">채용공고</a></li>
+            <li><a href="">법령·지침·서식</a></li>
+        </ul>
+    </nav>
+    <section>
+        <article id="firstArticle">
+            <h2>공고/공시</h2>
+            <p id="firstP">home > 알림자료 > 공고/공시</p>
+            <hr>
+
+        </article>
+        <article id="secondArticle">
+            <p id="secondP">전체 3,320건, 현재 페이지 2/332</p>
+            <div id="inputOption">
+                <select name="" id="select">
+                    <option value="title">제목</option>
+                    <option value="writer">작성자</option>
+                </select>
+                <input type="text" name="" id="search" placeholder="검색어를 입력하세요">
+                <input type="submit" value="검색">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>작성일자</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3310</td>
+                        <td><a href="">건강정보 개발 및 국가건강정보포털운영 2022년 민간위원회</a></td>
+                        <td>만성질환예방과</td>
+                        <td>2021-12-28</td>
+                        <td>137</td>
+                    </tr>
+                    <tr>
+                        <td>3309</td>
+                        <td><a href="">국제공인예방접종지정기관 지정공고</a></td>
+                        <td>질병관리청 검역정책과</td>
+                        <td>2021-12-23</td>
+                        <td>305</td>
+                    </tr>
+                    <tr>
+                        <td>3308</td>
+                        <td><a href="">2022년 환전외국환은행 선정결과 공고</a></td>
+                        <td>백신계약팀</td>
+                        <td>2021-12-23</td>
+                        <td>184</td>
+                    </tr>
+                    <tr>
+                        <td>3307</td>
+                        <td><a href="">2021질병관리청 정책연구용역(강원도 홍천군)</a></td>
+                        <td>운영지원과</td>
+                        <td>2021-12-20</td>
+                        <td>378</td>
+                    </tr>
+                    <tr>
+                        <td>3306</td>
+                        <td><a href="">2021질병관리청 정책연구용역(국민건강영양조사)</a></td>
+                        <td>운영지원과</td>
+                        <td>2021-12-17</td>
+                        <td>432</td>
+                    </tr>
+                    <tr>
+                        <td>3305</td>
+                        <td><a href="">2021질병관리청 건강영양조사분석과 정책연구용역(3건)</a></td>
+                        <td>운영지원과</td>
+                        <td>2021-12-14</td>
+                        <td>770</td>
+                    </tr>
+                    <tr>
+                        <td>3304</td>
+                        <td><a href="">제1차 기후보건영향평가 공청회 개최 공고</a></td>
+                        <td>미래질병대비과</td>
+                        <td>2021-12-08</td>
+                        <td>438</td>
+                    </tr>
+                    <tr>
+                        <td>3303</td>
+                        <td><a href="">2021질병관리청 청책연구용역(인권관점의 방역체계 구축)</a></td>
+                        <td>운영지원과</td>
+                        <td>2021-12-07</td>
+                        <td>633</td>
+                    </tr>
+                    <tr>
+                        <td>3302</td>
+                        <td><a href="">2021질병관리청 만성질환 관리과 정책연구용역(4건)</a></td>
+                        <td>운영지원과</td>
+                        <td>2021-12-07</td>
+                        <td>584</td>
+                    </tr>
+                    <tr>
+                        <td>3301</td>
+                        <td><a href="">2021질병관리청 청책연구용역(404호,405호)입찰공고</a></td>
+                        <td>운영지원과</td>
+                        <td>2021-12-06</td>
+                        <td>500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="" class="direct"><<</a></li> 
+            <li><a href="" class="direct"><</a></li> 
+            <li><a href="">1</a></li>
+            <li><a href="" id="page">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li><a href="">6</a></li>
+            <li><a href="">7</a></li>
+            <li><a href="">8</a></li>
+            <li><a href="">9</a></li>
+            <li><a href="">10</a></li>
+            <li><a href="" class="direct">></a></li>
+            <li><a href="" class="direct">>></a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>
