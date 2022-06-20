@@ -70,6 +70,13 @@ console.log(salaries);
 
 function getMaxValue(ary = []) {
     //배열요소에서 제일 큰 값을 반환하는 함수.
+    let min = Number.MAX_SAFE_INTEGER;
+    ary.forEach(val => {
+        if (min > val) {
+            min = val;
+        }
+    })
+    return min;
 }
 
 let maxVal = getMaxValue(salaries);
@@ -78,8 +85,14 @@ console.log(`가장 큰값 : ${maxVal}`);
 
 function sortAscend(ary = []) {
     //오름차순 정렬하는 함수.
+    let numAry = ary
+    let newAry = [];
+
+    return newAry;
 }
 result = sortAscend(salaries);
+
+
 console.log(salaries);
 console.clear();
 
@@ -117,22 +130,22 @@ result = ['Apple', 'Banana', 'Cherry'].reduce((accum, curr, CurrIdx, ary) => {
 console.log(result);
 document.write(result);
 
-result = [3,2,4,1,5].reduce(function(accum,curr){
-if(accum> curr)
-    return accum;
+result = [3, 2, 4, 1, 5].reduce(function (accum, curr) {
+    if (accum > curr)
+        return accum;
     else return curr;
-},0);//max 값 반환. 문제1)
+}, 0); //max 값 반환. 문제1)
 
 //합계구하기
-result = [3,2,4,1,5].reduce((accum,curr)=>{
-  return accum+curr;
-},0);
+result = [3, 2, 4, 1, 5].reduce((accum, curr) => {
+    return accum + curr;
+}, 0);
 console.log(`합계 : ${result}`);
 //평균 구하기
-result = [3,2,4,1,5,8,10].reduce((accum,curr)=>{
-    return accum+curr/result;
-  },0);
-  console.log(`평균 : ${result}`);
+result = [3, 2, 4, 1, 5, 8, 10].reduce((accum, curr) => {
+    return accum + curr / result;
+}, 0);
+console.log(`평균 : ${result}`);
 
 //   //합계구하기
 // result = [3,2,4,1,5,8].reduce((accum,curr,currIdx,ary)=>{
@@ -142,4 +155,3 @@ result = [3,2,4,1,5,8,10].reduce((accum,curr)=>{
 //     return accum+curr;
 // });//평균구하기
 //   console.log(`평균 : ${result}`);
-  
