@@ -38,16 +38,72 @@
 </head>
 
 <body>
-    <input type="file" id="selectFile" name="selectFile" accept="text/plain">
-    <script src="js/arry_basic3.js"></script>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cheery</li>
+    </ul>
+
+    <div>
+
+        <h1>Cities</h1>
+        <ul>
+            <li id="one" class="red">Seoul</li>
+            <li id="two" class="red">London</li>
+            <li id="three" class="red">Newyork</li>
+            <li id="four">Tokyo</li>
+
+        </ul>
+    </div>
+
+    <!--<input type="file" id="selectFile" name="selectFile" accept="text/plain">-->
+    <script src="js/array_method.js"></script>
+    <!--<input type="file" id="selectFile" name="selectFile" accept="text/plain">-->
     <button id="add">클릭</button>
+    <button id="add2">삭제</button>
     <script>
-        let btn = document.getElementById('add');
-        console.log(btn);
-        btn.addEventListener('Click', function () {
-            console.log(this); //윈도우도 아니고 오브젝트도 아니고 이벤트를 받는 대상
+        console.log(window)
+        let list = document.getElementsByTagName('li');// HTMLCOLLOCATION
+        // console.log(lis);
+        // lis[0].remove;
+        let detail = list[3];
+
+        //element,attridute,text => node, DOM API(method(),속성)
+        let attNode = detail.getAttribute('id');
+        let txtNode = detail.childNodes[0];
+
+        let add1 = document.getElementById('add')
+        add1.addEventListener('mouseover', function () {
+
+            let li = document.createElement('li'); // element node 생성
+            li.innerHTML = '대구';
+            let ul = document.querySelector('div>ul')
+            ul.appendChild(li); // <ul><li>대구</li></ul>
+            console.log(li);
         })
+
+        let btns = document.querySelectorAll('button')//NodeList
+        btns[1].addEventListener('mouseover',function(){
+            document.querySelector('div>ul>li').remove();//삭제하는 이벤트
+        })
+        console.log(btns[1]);
+
+        //let btn = document.getElementById('add');
+        // console.log(btn);
+        //btn.addEventListener('Click', function () {
+        //console.log(this); //윈도우도 아니고 오브젝트도 아니고 이벤트를 받는 대상
+        // })
+
+
+        // element node 생성.
+        // let li = document.createElement('li'); // element node 생성
+        //li.innerHTML = '대구';
+        //let ul = document.querySelector('div>ul')
+        //ul.appendChild(li); // <ul><li>대구</li></ul>
+        //console.log(li);
     </script>
+
+
 </body>
 
 </html>

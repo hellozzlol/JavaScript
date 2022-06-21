@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom.html</title>
+</head>
+<style>
+    table {
+        border: 1px solid black;
+
+    }
+
+    tr,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <div id="show">
+        <ul>
+            <li>이희수</li>
+        </ul>
+        <ul>
+            <li>권소정</li>
+        </ul>
+        <ul>
+            <li>김하은</li>
+        </ul>
+        <ul>
+            <li>윤정은</li>
+        </ul>
+    </div>
+    <script>
+        let students = [{
+            sno: 1,
+            name: "이희수"
+        }, {
+            sno: 2,
+            name: "권소정"
+        }, {
+            sno: 3,
+            name: "김하은"
+        }, {
+            sno: 4,
+            name: "윤정은"
+        }];
+
+        //Document Object Model => object:속성,기능.
+        let show = document.getElementById('show');
+
+        //console.log(ul);
+
+        //makeTable만들기
+
+        let x = document.createElement("table")
+        //x.setAttribute("id","myTable");
+        show.appendChild(x);
+        students.forEach(elem => {
+            let tr = document.createElement("tr");
+            for (let i in elem) {
+
+                let td = document.createElement("td");
+                //let td2 = document.createElement("td");
+                let txt = document.createTextNode(`${elem[i]}`)
+                //  let txt2 = document.createTextNode(`${elem.name}`)
+                tr.appendChild(td)
+                //tr.appendChild(td2)
+                td.appendChild(txt)
+                //td2.appendChild(txt2)
+                x.appendChild(tr)
+            }
+        })
+        // y.setAttribute("id","myTr");
+        // document.getElementById("myTable").appendChild(y);
+
+        // let t = document.createTextNode("Cell");
+
+        // z.appendChild(t);
+        // document.getElementById("myTr").appendChild(z);
+
+        // document.getElementById("myTable").style.border = "1px solid black"
+
+
+
+
+
+
+
+
+        //요소생성.crateElement
+        let ul = document.createElement('ul')
+        students.forEach(elem => {
+            let li = document.createElement('li');
+            li.setAttribute('id', elem.sno); // attributeNode 추가
+            let txt = document.createTextNode(`${elem.sno},${elem.name}`)
+            li.appendChild(txt);
+            //console.log(li);
+            show.appendChild(li); //부모요소에 하위요소를 붙여넣기
+
+        })
+
+        //console.log(ul)
+        show.appendChild(ul); //부모요소.appendChild(자식요소)
+    </script>
+
+</body>
+
+</html>
