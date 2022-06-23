@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asynch.html</title>
+
+    <script>
+        // 동기 vs 비동기
+        setTimeout(function () {
+
+            console.log('start');
+
+            setTimeout(function () {
+                console.log('mid');
+            }, 1000)
+
+            setTimeout(function () {
+                console.log('end');
+            }, 1500)
+
+        }, 2000)
+        //(비동기방식으로 불러오겠다 라는 객체) 비동기처리(Ajax) : Asynchromous Javascript And XML;
+        let xhtp = new XMLHttpRequest(); //Ajax  : 파일정보읽기.
+        // xhtp.open('get','data.txt');//요청방식,요청URL
+        xhtp.open('get', '../js/dataset.xml');
+        xhtp.send();
+        xhtp.onload = loadCallBack;
+        //console.log(xhtp.responseText);//결과를 받아오는 속성
+        //document.write(xhtp.responseText);
+        //let data = JSON.parse(xhtp.responseText);//텍스트 형식을 자스에서 오브젝트로 사용할수있게 해주는 메소드
+        //console.log(data);
+
+       
+
+        function loadCallBack() {
+            console.log(this.responseXML);
+            let doc = this.responseXML;
+            let records = doc.getElementsByTagName('record'); //HTMLCollection
+            records = doc.querySelectorAll('record'); //NodeList
+            console.log(records[0].children[1].innerHTML);
+            let show = document.getElementById('show');
+
+            records.forEach(member => {
+                //console.log(member)
+                let str = '';
+                for (let i = 0; i < member.children.length; i++) {
+                    str += member.children[i].innerHTML + " ";
+                }
+                console.log(str);
+                let li = document.createElement('li');
+                let txt = document.createTextNode(str);
+                li.appendChild(txt);
+                show.appendChild(li);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <ul id="show">
+        <!--<li>id, fn, ln, sal</li>-->
+    </ul>
+</body>
+
+</html>
