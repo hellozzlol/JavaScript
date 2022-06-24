@@ -27,14 +27,18 @@
 
         document.getElementById('search').addEventListener('click', findSido);
 
-        // function enterkey() {
-        //     if (window.event.keyCode == 13) {
+       function enterkey() {
+             if (window.event.keyCode == 13) {
 
-        //         // 엔터키가 눌렸을 때 실행할 내용
-        //         alert('검색')
-        //        this.findSido();
-        //     }
-        // }
+                // 엔터키가 눌렸을 때 실행할 내용
+                if (sidolist.indexOf(center.sido) == -1) {
+                    sidolist.push(center.sido);
+                }; // -1
+                alert('내용입력 후 엔터 ')
+             this.enterkey;
+            
+             }
+         }
 
 
         function findSido(e) {
