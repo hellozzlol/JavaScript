@@ -54,3 +54,13 @@ console.log(newCompany)
    //reduce 이해못함다시해야함.ㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜ.
 
 
+   let result = newCompany.reduce((accum, curr, currIdx) => {
+        return accum + curr.salary; //초기값 쓰고싶으면 리턴하면된다.
+    }, 0);
+    console.log("합계 : "+result+"만원");
+
+    let result1 = newCompany.reduce((accum, curr, currIdx) => {
+        return accum + curr.salary; //초기값 쓰고싶으면 리턴하면된다.
+    }, 0);
+    let averge = result/newCompany.length;
+    console.log("평균 : "+averge+"만원");
