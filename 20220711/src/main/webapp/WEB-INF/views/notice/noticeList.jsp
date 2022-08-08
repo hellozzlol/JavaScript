@@ -32,7 +32,6 @@
 						<th width="130">작성자</th>
 						<th width="200">제목</th>
 						<th width="130">작성일자</th>
-						<th width="180">첨부파일</th>
 						<th width="70">조회수</th>
 					</tr>
 				</thead>
@@ -45,7 +44,6 @@
 									<td>${b.noticeWriter }</td>
 									<td>${b.noticeTitle }</td>
 									<td>${b.noticeDate }</td>
-									<td>${b.noticeAttech }</td>
 									<td>${b.noticeHit }</td>
 								</tr>
 							</c:forEach>
@@ -64,9 +62,9 @@
 
 		</div><br>
 		<div>
-		<c:if test="${author == 'ADMIN' }">
+		
 		<button type="button" onclick="location.href='noticeForm.do'">글 등록</button>
-		</c:if>
+		
 		</div>
 	</div>
 	<script type="text/javascript">

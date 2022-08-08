@@ -74,24 +74,20 @@ public class NoticeServiceImpl implements NoticeService {
 	public int noticeInsert(NoticeVO vo) {
 		// 글 등록
 		int n = 0;
-		String sql = "INSERT INTO NOTICE VALUES(notice_seq.nextval,?,?,?,?,0,?,?)";
+		String sql = "INSERT INTO NOTICE VALUES(NOTICENO.nextval,?,?,?,?,0,?,?)";
 		try {
 			conn = dao.getConnection();
 			psmt = conn.prepareStatement(sql);
-			//psmt.setInt(1, vo.getNoticeId());
 			psmt.setString(1, vo.getNoticeWriter());
 			psmt.setString(2, vo.getNoticeTitle());
 			psmt.setString(3, vo.getNoticeSubject());
 			psmt.setDate(4, vo.getNoticeDate());
-			//psmt.setInt(5, vo.getNoticeHit());
 			psmt.setString(5, vo.getNoticeAttech());
 			psmt.setString(6, vo.getNoticeAttechDir());
-
 			n = psmt.executeUpdate();
-
-		} catch (SQLException e) {
+		}catch(SQLException e) {
 			e.printStackTrace();
-		} finally {
+		}finally {
 			close();
 		}
 		return n;
