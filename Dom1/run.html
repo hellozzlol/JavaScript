@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- button과 이미지를 넣어 준다. -->
+    <button onclick="run();">달리기</button>
+    <button onclick="autoRun();">자동으로 달리기</button>
+    <button onclick="stop();">멈추기</button>
+    <br/>
+    <img src="../images/run1.png" id="one">
+    <script>
+        /*
+			<<문제1>>
+			run1.png, run1.png, run1.png를 사용. 
+           1. 달리기 버튼을 클릭할때마다 이미지 사진이 바껴야함.
+           2. run1~3까지 있으므로 자동으로 바뀌도록 처리되어야함.
+               이미지가 순서대로 나와야 달리는게 자연스러움으로 순서대로 이미지가 나와야 좋음.
+        */
+        var ninja=["../images/run1.png", "../images/run2.png", "../images/run3.png"];
+
+        var ninjaIndex=0;
+
+        var run=function(){
+            ninjaIndex=ninjaIndex+1;
+            if(ninjaIndex==3){
+                ninjaIndex=0;
+            }
+            document.querySelector("#one").setAttribute("src", ninja[ninjaIndex]);
+        };
+
+        //run 함수를 활용해서 자동으로 달리기 실행해보기
+        var autoRun=function(){
+            /*
+                HTML문서 img#one에 접근하여
+                setInterval(function(){}, num); 로 run함수를 call하기
+            */
+            setInterval(run, 50);
+        };
+    </script>
+</body>
+</html>
